@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090611">
+<title>ALONE ACCESS | Access Portal</title>
+<style>
+:root{--bg:#090611;--panel:#151020;--line:#35204f;--red:#a855f7;--pink:#c084fc;--muted:#b9accb;--white:#fbf7ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 85% 0%,#32145a 0%,#160b27 38%,#090611 75%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:min(100%,480px);margin:0 auto;padding:54px 22px 28px}
+.brand{font-size:10px;letter-spacing:2.4px;color:var(--pink);font-weight:800;margin-bottom:14px}
+h1{font-size:clamp(35px,10vw,47px);line-height:1.03;letter-spacing:-1.5px;margin:0 0 18px;font-weight:800}
+h1 span{display:block;color:var(--pink)}
+.intro{font-size:14px;line-height:1.7;color:var(--muted);max-width:320px;margin:0 0 24px}
+.btn{display:block;width:100%;border:1px solid var(--line);border-radius:9px;padding:13px 15px;margin:9px 0;background:#21151d;color:var(--white);text-decoration:none;font-size:13px;font-weight:700;text-align:center;cursor:pointer}
+.btn.primary{background:linear-gradient(100deg,#a855f7,#7c3aed);border-color:transparent;box-shadow:0 5px 18px #a855f733}
+.btn:hover{filter:brightness(1.12)}
+.meta{display:flex;gap:8px;align-items:center;margin:19px 0 26px;color:#c4b5d8;font-size:10px}
+.dot{width:6px;height:6px;background:#a855f7;border-radius:50%;box-shadow:0 0 9px #c084fc}
+.features{display:grid;gap:10px}
+.feature{background:linear-gradient(130deg,#1b1129,#120d1d);border:1px solid #35204f;border-radius:13px;padding:15px;display:grid;grid-template-columns:35px 1fr;gap:11px;align-items:start}
+.num{height:28px;width:28px;border:1px solid #6840a0;border-radius:8px;display:grid;place-items:center;color:var(--pink);font-size:11px;font-weight:bold}
+.feature h2{font-size:13px;margin:2px 0 6px}
+.feature p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}
+.note{font-size:10px;color:#85737c;line-height:1.6;margin-top:23px}
+footer{border-top:1px solid #35204f;margin-top:26px;padding-top:16px;color:#8f7aa8;font-size:10px;display:flex;justify-content:space-between}
+.screen{display:none}
+.screen.active{display:block}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#c4b5d8;font-size:10px;letter-spacing:1px;margin-bottom:25px}
+.close{border:0;border-radius:8px;background:#2c1745;color:#d8b4fe;font-size:20px;width:34px;height:34px;cursor:pointer}
+.panel{border:1px solid #35204f;background:#151020;border-radius:16px;padding:22px 18px;margin:18px 0}
+.panel .badge{color:var(--pink);font-size:10px;font-weight:800;letter-spacing:2px}
+.panel h2{font-size:27px;line-height:1.1;margin:12px 0}
+.panel>p{font-size:12px;color:var(--muted);line-height:1.7}
+.status{display:flex;gap:11px;align-items:center;border:1px solid #35204f;background:#1b1328;border-radius:12px;padding:14px;margin:10px 0}
+.status .num{flex-shrink:0}
+.status strong{display:block;font-size:12px;margin-bottom:5px}
+.status small{display:block;color:var(--muted);font-size:10px;line-height:1.5}
+.message{display:none;border:1px solid #684050;background:#2a131d;padding:13px;border-radius:10px;color:#ffdce4;font-size:12px;line-height:1.6;margin-top:14px}
+@media(min-width:600px){.wrap{padding-top:70px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section id="home" class="screen active">
+    <div class="brand">ALONE ACCESS PORTAL</div>
+    <h1>Access,<span>unlocked.</span></h1>
+    <p class="intro">Get your secure access key in a few quick steps. Keep access details private and only use keys from a source you trust.</p>
+    <button class="btn primary" id="getKey">Get access key ↗</button>
+    <a class="btn" href="https://whatsapp.com/channel/0029VbD0lj6Fsn0WYMavOX3J" target="_blank" rel="noopener noreferrer">WhatsApp channel</a>
+    <div class="meta"><span class="dot"></span> Secure verification &nbsp;·&nbsp; Access guidance</div>
+    <div class="features">
+      <article class="feature"><div class="num">01</div><div><h2>Quick verification</h2><p>Complete one short verification step to continue.</p></div></article>
+      <article class="feature"><div class="num">02</div><div><h2>Time-limited</h2><p>Follow the access provider's instructions to check whether a key has an expiry time.</p></div></article>
+      <article class="feature"><div class="num">03</div><div><h2>Device-aware</h2><p>Use access keys only with the app or service that issued them. This demo does not bind keys to devices.</p></div></article>
+    </div>
+    <p class="note">Use only official access links. Never share your passwords, banking details, or private account information.</p>
+    <footer><span>© <span class="year"></span> ALONE ACCESS</span><span>ACCESS PORTAL</span></footer>
+  </section>
+
+  <section id="protected" class="screen">
+    <div class="topline"><button class="close" id="backHome" aria-label="Back">×</button><span>ACCESS SYSTEM · ● ONLINE</span></div>
+    <div class="panel">
+      <div style="text-align:center;font-size:42px;color:var(--pink);font-weight:800;margin:5px 0 12px">A</div>
+      <h2 style="text-align:center;font-size:22px">Protected access</h2>
+      <p style="text-align:center">Your access details should stay private. Continue only if you trust the source.</p>
+    </div>
+    <div class="status"><div class="num">01</div><div><strong>Quick verification</strong><small>Continue through the access provider's verification step.</small></div></div>
+    <div class="status"><div class="num">02</div><div><strong>Time-limited</strong><small>Check the key's validity period with the official provider.</small></div></div>
+    <div class="status"><div class="num">03</div><div><strong>Device-aware</strong><small>Follow the official service's device rules.</small></div></div>
+    <button class="btn primary" id="continue">Continue verification ↗</button>
+    <button class="btn" id="returnHome">Back to home</button>
+    <div class="message" id="verificationMessage" role="status" aria-live="polite"></div><label for="accessKeyInput" style="display:block;font-size:12px;margin-top:16px;color:#c4b5d8">Enter your access key</label><input id="accessKeyInput" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ALONE XXXXX-XXXXX-XXXXX" style="width:100%;margin-top:8px;padding:14px;border-radius:9px;border:1px solid #6840a0;background:#090611;color:#fbf7ff;font-size:14px"><button class="btn primary" id="activateKey" type="button">Verify access key</button>
+    <p class="note">Do not enter account passwords or payment details on an unknown verification page.</p>
+    <footer><span>© <span class="year"></span> ALONE ACCESS</span><span>STEP 1 OF 2</span></footer>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.year').forEach(el=>el.textContent=new Date().getFullYear());
+const home=document.getElementById('home'), protectedScreen=document.getElementById('protected');
+function showProtected(){home.classList.remove('active');protectedScreen.classList.add('active');window.scrollTo(0,0)}
+function showHome(){protectedScreen.classList.remove('active');home.classList.add('active');window.scrollTo(0,0)}
+document.getElementById('getKey').addEventListener('click',showProtected);
+document.getElementById('backHome').addEventListener('click',showHome);
+document.getElementById('returnHome').addEventListener('click',showHome);
+const msg=document.getElementById('verificationMessage');
+function showMessage(text,ok=false){msg.style.display='block';msg.style.borderColor=ok?'#6840a0':'#a33b60';msg.style.background=ok?'#211536':'#2a131d';msg.style.color=ok?'#e9d5ff':'#ffdce4';msg.textContent=text;}
+document.getElementById('continue').addEventListener('click',()=>{
+  document.getElementById('accessKeyInput').focus();
+  showMessage('Enter the access key provided by the site administrator, then tap Verify access key.');
+});
+document.getElementById('activateKey').addEventListener('click',async()=>{
+  const key=document.getElementById('accessKeyInput').value.trim();
+  if(!key){showMessage('Please enter your access key.');return;}
+  const btn=document.getElementById('activateKey');btn.disabled=true;btn.textContent='Checking…';
+  try{
+    const res=await fetch('/api/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key})});
+    const data=await res.json().catch(()=>({}));
+    if(!res.ok || data.success===false){showMessage(data.message||data.error||'The key could not be verified. Check it and try again.');}
+    else {showMessage(data.message||'Access key verified successfully.',true);}
+  }catch(e){showMessage('The verification service is not connected yet. Deploy the backend files and configure the Vercel environment variables.');}
+  finally{btn.disabled=false;btn.textContent='Verify access key';}
+});
+</script>
+</body>
+</html>
