@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080411">
+<title>ALONEXITES OFC | PREMIUM</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080411;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  padding: 18px 6%;
+  background: #080510;
+  border-bottom: 2px solid #a020f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #bd4aff;
+}
+
+.online {
+  border: 1px solid #a020f0;
+  border-radius: 20px;
+  padding: 9px 13px;
+  font-size: 12px;
+  color: #00ff91;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 65px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(#080411bb,#080411ed),
+    url("yuta-bg.jpg") center/cover no-repeat,
+    radial-gradient(circle,#54117c,#080411 75%);
+}
+
+.content {
+  width: 100%;
+  max-width: 720px;
+}
+
+.version {
+  color: #d580ff;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(35px, 8vw, 65px);
+  margin: 20px 0;
+  text-shadow: 0 0 25px #a020f0;
+}
+
+h1 span {
+  color: #b52cff;
+}
+
+.subtitle {
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.slogan {
+  color: #d580ff;
+  font-size: 18px;
+  font-style: italic;
+  margin: 25px 0;
+}
+
+.card {
+  background: rgba(13,6,24,.96);
+  border: 2px solid #a020f0;
+  border-radius: 17px;
+  padding: 30px 22px;
+  box-shadow: 0 0 35px #a020f055;
+}
+
+.card-heading {
+  color: #d580ff;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card h2 {
+  margin: 20px 0 10px;
+  font-size: 30px;
+}
+
+.description {
+  color: #bdb2ca;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 17px;
+  background: #080510;
+  border: 1px solid #9d42d6;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #dc9aff;
+  box-shadow: 0 0 15px #a020f055;
+}
+
+button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 17px;
+  background: linear-gradient(90deg,#7111c9,#b02cff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+#message {
+  margin-top: 17px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  color: #dfc9f5;
+  font-size: 12px;
+}
+
+.benefits {
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.benefits h2 {
+  color: #d580ff;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.benefit {
+  background: #150b21;
+  padding: 25px 12px;
+  border: 1px solid #682a8c;
+  border-radius: 12px;
+}
+
+.benefit h3 {
+  color: #d580ff;
+  margin-bottom: 12px;
+}
+
+.benefit p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contact {
+  padding: 40px 15px;
+  text-align: center;
+  background: #100817;
+  border-top: 1px solid #a020f0;
+}
+
+.contact h2 {
+  color: #d580ff;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 14px 25px;
+  background: #7111c9;
+  color: white;
+  text-decoration: none;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 25px 10px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+footer span {
+  color: #bd4aff;
+}
+
+@media(max-width:600px) {
+  nav {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 45px 12px;
+  }
+
+  .card {
+    padding: 23px 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">👑 ALONEXITES <span>OFC</span></div>
+  <div class="online">● Secure Online</div>
+</nav>
+
+<section class="hero">
+<div class="content">
+
+  <div class="version">ALONEXITES / V10 / PREMIUM</div>
+
+  <h1>ALONEXITES <span>OFC</span></h1>
+
+  <div class="subtitle">PREMIUM ACCESS</div>
+
+  <div class="slogan">
+    "One Key. Full Access. No Limits."
+  </div>
+
+  <div class="card">
+
+    <div class="card-heading">
+      🔒 ALONEXITES OFC CONTROL
+    </div>
+
+    <h2>License Key</h2>
+
+    <p class="description">
+      Enter your premium access key
+      to unlock exclusive access.
+    </p>
+
+    <label for="license">LICENSE KEY</label>
+
+    <input
+      id="license"
+      type="text"
+      placeholder="ALONE-XXXXX-XXXXX-XXXXX"
+      autocomplete="off"
+    >
+
+    <button id="unlockBtn" onclick="unlock()">
+      🚀 Unlock Access
+    </button>
+
+    <div id="message" aria-live="polite"></div>
+
+    <div class="features">
+      <span>✓ Live Key Validation</span>
+      <span>✓ Expiry Check</span>
+      <span>✓ Premium Access</span>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="benefits">
+
+  <h2>★ WHY CHOOSE US?</h2>
+
+  <div class="grid">
+
+    <div class="benefit">
+      <h3>⚡ Fast Access</h3>
+      <p>Simple access verification.</p>
+    </div>
+
+    <div class="benefit">
+      <h3>🔐 Secure System</h3>
+      <p>Server-side license verification.</p>
+    </div>
+
+    <div class="benefit">
+      <h3>👑 Premium</h3>
+      <p>Exclusive licensed features.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <h2>CONTACT ALONEXITES OFC</h2>
+
+  <p>Need assistance? Contact us on WhatsApp.</p>
+
+  <a href="https://wa.me/2349153189934"
+     target="_blank"
+     rel="noopener">
+    💬 WhatsApp Support
+  </a>
+
+</section>
+
+<footer>
+  © 2026 <span>ALONEXITES OFC</span>.
+  All Rights Reserved.
+  <br><br>
+  POWERED BY ALONEXITES 👑
+</footer>
+
+<script>
+async function unlock() {
+
+  const key = document.getElementById("license").value.trim();
+  const message = document.getElementById("message");
+  const button = document.getElementById("unlockBtn");
+
+  if (!key) {
+    message.style.color = "#ff5555";
+    message.textContent = "Please enter your access key.";
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = "Checking key...";
+
+  message.style.color = "#d580ff";
+  message.textContent = "Verifying your license...";
+
+  try {
+
+    const response = await fetch("/api/activate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        key: key
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(
+        result.message || "Invalid or expired key."
+      );
+    }
+
+    message.style.color = "#00ff91";
+    message.textContent =
+      result.message || "Access granted!";
+
+  } catch (error) {
+
+    message.style.color = "#ff5555";
+    message.textContent = error.message;
+
+  } finally {
+
+    button.disabled = false;
+    button.textContent = "🚀 Unlock Access";
+
+  }
+}
+</script>
+
+</body>
+    </html>
+    
